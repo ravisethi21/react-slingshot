@@ -33,6 +33,7 @@ jobs:
     docker:
       - image: circleci/node:13.8.0
     steps:
+      - checkout
       - restore_cache:
           keys:
            - "npm-pack"
@@ -42,6 +43,7 @@ jobs:
     docker:
       - image: circleci/node:13.8.0
     steps:
+      - checkout
       - restore_cache:
           keys:
            - "npm-pack"
