@@ -48,7 +48,7 @@ jobs:
           keys:
            - "npm-pack"
       - run: npm i
-      - run: npm run audit
+      - run: npm audit
 workflows:
   myworkflow:  # Run the welcome/run job in its own container
     jobs:
