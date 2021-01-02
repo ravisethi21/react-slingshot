@@ -33,18 +33,18 @@ jobs:
     docker:
       - image: circleci/node:13.8.0
     steps:
-      - restrore_cache:
+      - restore_cache:
           keys:
-            "npm-pack"
+           - "npm-pack"
       - run: npm i
       - run: npm run test
   analyze:
     docker:
       - image: circleci/node:13.8.0
     steps:
-      - restrore_cache:
+      - restore_cache:
           keys:
-            "npm-pack"
+           - "npm-pack"
       - run: npm i
       - run: npm run audit
 workflows:
